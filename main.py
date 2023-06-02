@@ -10,8 +10,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from pushbullet import PushBullet
 import sqlite3
 
-
-
 API_KEY = os.getenv("API_KEY")
 pb = PushBullet(API_KEY)
 
@@ -45,4 +43,12 @@ def verifica_preco(url, categoria):
     
     driver.quit()
 
- 
+categorias = {
+    'CPU': [],
+    'GPU': [],
+    'RAM': [],
+    'MOBO': [],
+    'ARMAZENAMENTO': [],
+    'REFRIGERACAO': [],
+    'GABINETE': [],
+}
