@@ -88,6 +88,26 @@ categorias = {
         'https://www.terabyteshop.com.br/produto/18973/processador-amd-ryzen-7-5700g-38ghz-46ghz-turbo-8-cores-16-threads-cooler-wraith-stealth-am4-com-video-integrado-100-100000263box', 
     ],
     'GPU': [
+        'https://www.terabyteshop.com.br/produto/21631/placa-de-video-inno3d-geforce-rtx-3060-twin-x2-12gb-gddr6-dlss-ray-tracing-n30602-12d6-119032ah',
+        'https://www.terabyteshop.com.br/produto/24906/placa-de-video-zotac-gaming-geforce-rtx-3060-twin-edge-oc-white-12gb-gddr6-dlss-ray-tracing-zt-a30600h-10m', 
+        'https://www.terabyteshop.com.br/produto/24158/placa-de-video-leadtek-winfast-nvidia-geforce-rtx-3060-ti-hurricane-white-edition-8gb-gddr6-dlss-ray-tracing',
+        'https://www.terabyteshop.com.br/produto/23276/placa-de-video-colorful-igamer-nvidia-geforce-rtx-3060-ultra-w-oc-8gb-gddr6-dlss-ray-tracing', 
+        'https://www.terabyteshop.com.br/produto/24508/placa-de-video-superframe-nvidia-geforce-rtx-3060-12gb-gddr6-dlss-ray-tracing-rtx306012gd6p2ip3'
+        'https://www.terabyteshop.com.br/produto/24384/placa-de-video-galax-nvidia-geforce-rtx-3060-ti-1-click-oc-plus-8gb-gddr6x-dlss-ray-tracing-36ism6md2kcv', 
+        'https://www.terabyteshop.com.br/produto/21409/placa-de-video-gigabyte-nvidia-geforce-rtx-2060-windforce-oc-12gb-gddr6-dlss-ray-tracing-gv-n2060wf2oc-12gd',
+        'https://www.terabyteshop.com.br/produto/20438/placa-de-video-msi-geforce-rtx-3060-ventus-2x-oc-lhr-12gb-gddr6-dlss-ray-tracing-912-v397-050',
+        'https://www.terabyteshop.com.br/produto/25063/placa-de-video-msi-nvidia-geforce-rtx-4060-ti-ventus-3x-oc-8gb-gddr6x-dlss-ray-tracing-912-v515-023'
+        'https://www.terabyteshop.com.br/produto/25064/placa-de-video-msi-nvidia-geforce-rtx-4060-ti-gaming-x-8gb-gddr6-dlss-ray-tracing-912-v515-022'
+    ],
+    'RAM': [
+        'https://www.terabyteshop.com.br/produto/19314/memoria-kingston-fury-beast-8gb-3200mhz-ddr4-black-kf432c16bb8',
+        'https://www.terabyteshop.com.br/produto/25032/memoria-ddr4-kingston-fury-superframe-rgb-8gb-3200mhz-black-kf432c16bba8cl', 
+        'https://www.terabyteshop.com.br/produto/16829/memoria-ddr4-geil-orion-rgb-edicao-amd-8gb-3000mhz-gray-gaosg48gb3000c16asc', 
+        'https://www.terabyteshop.com.br/produto/18885/memoria-ddr4-xpg-spectrix-d50-8gb-3200mhz-rgb-gray-ax4u320088g16a-st50', 
+        'https://www.terabyteshop.com.br/produto/23879/memoria-ddr4-zadak-spark-rgb-16gb-3600mhz-black-zd4-spr36c25-16gyb1?p=714486', 
+        'https://www.terabyteshop.com.br/produto/16835/memoria-ddr4-geil-evo-x-ii-rgb-sync-8gb-3000mhz-gaexsy48gb3000c16asc?p=714486',
+        'https://www.terabyteshop.com.br/produto/19156/memoria-kingston-fury-beast-16gb-3600mhz-ddr4-cl17-preto-kf436c17bbk216',
+        'https://www.terabyteshop.com.br/produto/25000/memoria-ddr4-netac-shadow-ii-8gb-3200mhz-white-ntswd4p32sp-08w',
     ],
     'ARMAZENAMENTO': [
         'https://www.terabyteshop.com.br/produto/16596/ssd-wd-green-480gb-m2-nvme-leitura-2400mbs-e-gravacao-1650mbs-wds480g2g0c', 
