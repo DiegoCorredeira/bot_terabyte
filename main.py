@@ -4,6 +4,7 @@ import dotenv
 import schedule
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
@@ -44,8 +45,10 @@ def atualizar_preco(url, nome, preco, categoria):
 # class tit-prod 
 # class val-prod valVista
 def verifica_preco(url, categoria):
+    chrome_options = Options()
+    chrome_options.add_argument("--window-position=-2000,0")
     driver_service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=driver_service)
+    driver = webdriver.Chrome(service=driver_service, options=chrome_options)
     time.sleep(5)
     driver.get(url)
     time.sleep(15)
