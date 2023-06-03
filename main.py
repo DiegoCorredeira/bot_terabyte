@@ -10,10 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from pushbullet import PushBullet
 import sqlite3
 
-dotenv.load_dotenv()
-
-API_KEY = os.getenv("API_KEY")
-pb = PushBullet(API_KEY)
+pb = PushBullet(CHAVE_DA_API_AQUI)
 
 def criar_tabela():
     conn = sqlite3.connect('precos.db')
@@ -86,72 +83,45 @@ def agendando_notificacao(categorias):
 criar_tabela()
 categorias = {
     'CPU': [
-        'https://www.terabyteshop.com.br/produto/21014/ryzen-3-4100-cooler-wraith-stealth',
-        'https://www.terabyteshop.com.br/produto/21317/processador-amd-ryzen-5-4600g-37ghz-42ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-100-100000147box', 
-        'https://www.terabyteshop.com.br/produto/20782/processador-amd-ryzen-5-5500-36ghz-42ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-100-100000457box', 
-        'https://www.terabyteshop.com.br/produto/20788/processador-amd-ryzen-5-5600-35ghz-44ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-100-100000927box'
-        'https://www.terabyteshop.com.br/produto/18971/processador-amd-ryzen-5-5600g-39ghz-44ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-com-video-integrado-100-100000252box', 
-        'https://www.terabyteshop.com.br/produto/21277/processador-amd-ryzen-5-4500-36ghz-41ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-100-100000644box', 
-        'https://www.terabyteshop.com.br/produto/15692/processador-amd-ryzen-5-5600x-37ghz-46ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4', 
-        'https://www.terabyteshop.com.br/produto/11543/processador-amd-ryzen-3-3200g-36ghz-40ghz-turbo-4-core-4-thread-cooler-wraith-stealth-am4', 
-        'https://www.terabyteshop.com.br/produto/20813/processador-amd-ryzen-7-5700x-34ghz-46ghz-turbo-8-cores-16-threads-am4-sem-cooler-100-100000926wof', 
-        'https://www.terabyteshop.com.br/produto/18973/processador-amd-ryzen-7-5700g-38ghz-46ghz-turbo-8-cores-16-threads-cooler-wraith-stealth-am4-com-video-integrado-100-100000263box', 
+        'padrao_para_link_do_produto',
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
     ],
     'GPU': [
-        'https://www.terabyteshop.com.br/produto/21631/placa-de-video-inno3d-geforce-rtx-3060-twin-x2-12gb-gddr6-dlss-ray-tracing-n30602-12d6-119032ah',
-        'https://www.terabyteshop.com.br/produto/24906/placa-de-video-zotac-gaming-geforce-rtx-3060-twin-edge-oc-white-12gb-gddr6-dlss-ray-tracing-zt-a30600h-10m', 
-        'https://www.terabyteshop.com.br/produto/24158/placa-de-video-leadtek-winfast-nvidia-geforce-rtx-3060-ti-hurricane-white-edition-8gb-gddr6-dlss-ray-tracing',
-        'https://www.terabyteshop.com.br/produto/23276/placa-de-video-colorful-igamer-nvidia-geforce-rtx-3060-ultra-w-oc-8gb-gddr6-dlss-ray-tracing', 
-        'https://www.terabyteshop.com.br/produto/24508/placa-de-video-superframe-nvidia-geforce-rtx-3060-12gb-gddr6-dlss-ray-tracing-rtx306012gd6p2ip3'
-        'https://www.terabyteshop.com.br/produto/24384/placa-de-video-galax-nvidia-geforce-rtx-3060-ti-1-click-oc-plus-8gb-gddr6x-dlss-ray-tracing-36ism6md2kcv', 
-        'https://www.terabyteshop.com.br/produto/21409/placa-de-video-gigabyte-nvidia-geforce-rtx-2060-windforce-oc-12gb-gddr6-dlss-ray-tracing-gv-n2060wf2oc-12gd',
-        'https://www.terabyteshop.com.br/produto/20438/placa-de-video-msi-geforce-rtx-3060-ventus-2x-oc-lhr-12gb-gddr6-dlss-ray-tracing-912-v397-050',
-        'https://www.terabyteshop.com.br/produto/25063/placa-de-video-msi-nvidia-geforce-rtx-4060-ti-ventus-3x-oc-8gb-gddr6x-dlss-ray-tracing-912-v515-023'
-        'https://www.terabyteshop.com.br/produto/25064/placa-de-video-msi-nvidia-geforce-rtx-4060-ti-gaming-x-8gb-gddr6-dlss-ray-tracing-912-v515-022'
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
     ],
     'RAM': [
-        'https://www.terabyteshop.com.br/produto/19314/memoria-kingston-fury-beast-8gb-3200mhz-ddr4-black-kf432c16bb8',
-        'https://www.terabyteshop.com.br/produto/25032/memoria-ddr4-kingston-fury-superframe-rgb-8gb-3200mhz-black-kf432c16bba8cl', 
-        'https://www.terabyteshop.com.br/produto/16829/memoria-ddr4-geil-orion-rgb-edicao-amd-8gb-3000mhz-gray-gaosg48gb3000c16asc', 
-        'https://www.terabyteshop.com.br/produto/18885/memoria-ddr4-xpg-spectrix-d50-8gb-3200mhz-rgb-gray-ax4u320088g16a-st50', 
-        'https://www.terabyteshop.com.br/produto/23879/memoria-ddr4-zadak-spark-rgb-16gb-3600mhz-black-zd4-spr36c25-16gyb1?p=714486', 
-        'https://www.terabyteshop.com.br/produto/16835/memoria-ddr4-geil-evo-x-ii-rgb-sync-8gb-3000mhz-gaexsy48gb3000c16asc?p=714486',
-        'https://www.terabyteshop.com.br/produto/19156/memoria-kingston-fury-beast-16gb-3600mhz-ddr4-cl17-preto-kf436c17bbk216',
-        'https://www.terabyteshop.com.br/produto/25000/memoria-ddr4-netac-shadow-ii-8gb-3200mhz-white-ntswd4p32sp-08w'
-
-
-
-
+        'padrao_para_link_do_produto',
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
     ],
     'MOBO': [
-        'https://www.terabyteshop.com.br/produto/13983/placa-mae-asus-tuf-gaming-b550m-plus-chipset-b550-amd-am4-matx-ddr4', 
-        'https://www.terabyteshop.com.br/produto/11008/placa-mae-gigabyte-b450m-gaming-ddr4-am4',
-        'https://www.terabyteshop.com.br/produto/14277/placa-mae-asrock-b550m-steel-legend-chipset-b550-amd-am4-matx-ddr4',
-        'https://www.terabyteshop.com.br/produto/20791/placa-mae-gigabyte-b550-aorus-pro-v2-chipset-b550-amd-am4-atx-ddr4', 
-        'https://www.terabyteshop.com.br/produto/18558/placa-mae-tuf-gaming-b550m-e-wifi-chipset-b550-am4-dual-m2-type-c-aura-matx-ddr4-90mb1770-m0eay0-imp'
-
-
+        'padrao_para_link_do_produto',
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
     ],
     'ARMAZENAMENTO': [
-        'https://www.terabyteshop.com.br/produto/16596/ssd-wd-green-480gb-m2-nvme-leitura-2400mbs-e-gravacao-1650mbs-wds480g2g0c', 
-        'https://www.terabyteshop.com.br/produto/23002/ssd-kingston-nv2-500gb-m2-nvme-2280-leitura-3500mbs-e-gravacao-2100mbs-snv2s500g', 
-        'https://www.terabyteshop.com.br/produto/23000/ssd-kingston-nv2-1tb-m2-nvme-2280-leitura-3500mbs-e-gravacao-2100mbs-snv2s1000g',
-        'https://www.terabyteshop.com.br/produto/23580/ssd-redragon-blaze-gd-703-512gb-m2-2280-leitura-7050mbs-gravacao-4200mbs', 
-        'https://www.terabyteshop.com.br/produto/23808/ssd-kingston-nv2-250gb-m2-nvme-2280-leitura-3000mbs-e-gravacao-1300mbs-snv2s250g' 
-
-
-
+        'padrao_para_link_do_produto',
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
     ],
     'REFRIGERACAO': [
-        'https://www.terabyteshop.com.br/produto/21866/water-cooler-superframe-isengard-argb-360mm-intel-amd-controladora-black-sf-w360', 
-        'https://www.terabyteshop.com.br/produto/25119/water-cooler-cougar-poseidon-lt-360-argb-360mm-intel-amd-black-cgr-psdltrgb-360',
-        'https://www.terabyteshop.com.br/produto/15888/water-cooler-xpg-levante-360mm-rgb-intel-amd-15260035' 
+        'padrao_para_link_do_produto',
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
         
     ],
     'GABINETE': [
-        'https://www.terabyteshop.com.br/produto/24982/gabinete-gamer-liketec-cube-kirra-rgb-mid-tower-vidro-temperado-black-sem-fonte-com-4-fans', 
-        'https://www.terabyteshop.com.br/produto/23305/gabinete-gamer-lian-li-o11-dynamic-mini-redragon-edition-mid-tower-vidro-temperado-atx-black-sem-fonte-sem-fan-o11dmini-rd-x', 
-        'https://www.terabyteshop.com.br/produto/19584/gabinete-gamer-cooler-master-masterbox-nr200-vidro-temperado-white-mini-itx-sem-fonte-com-2-fans-mcb-nr200-wnnn-s00', 
+        'padrao_para_link_do_produto',
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
+        'padrao_para_link_do_produto', 
     ],
     'TECLADO': [],
 }
