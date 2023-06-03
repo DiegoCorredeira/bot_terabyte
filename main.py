@@ -46,7 +46,7 @@ def atualizar_preco(url, nome, preco, categoria):
 # class val-prod valVista
 def verifica_preco(url, categoria):
     chrome_options = Options()
-    chrome_options.add_argument("--window-position=-2000,0")
+    chrome_options.add_argument("--window-position=-3000,0")
     driver_service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=driver_service, options=chrome_options)
     time.sleep(5)
