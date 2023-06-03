@@ -1,7 +1,6 @@
 import time
 import os 
 import dotenv
-import dotenv
 import schedule
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -55,24 +54,27 @@ def atualizar_preco(url, nome, preco, categoria):
 def verifica_preco(url, categoria):
     driver_service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=driver_service)
-
+    time.sleep(5)
     driver.get(url)
+    time.sleep(15)
 
     try:
         nome_element = driver.find_element(By.CSS_SELECTOR, '.tit-prod')
         preco_element = driver.find_element(By.CSS_SELECTOR, '.valVista')
+        tbt_avise_elements = driver.find_elements(By.CSS_SELECTOR, '.tbt_avise')
 
-        nome = nome_element.text.strip()
-        preco = float(preco_element.text.strip().replace('R$', '').replace('.', '').replace(',', '.'))
-
-        print(f'Produto: {nome}')
-        print(f'Preço à vista: {preco:.2f}')
-        atualizar_preco(url, nome, preco, categoria)
-
+        if not tbt_avise_elements:
+            nome = nome_element.text.strip()
+            preco = float(preco_element.text.strip().replace('R$', '').replace('.', '').replace(',', '.'))
+            print(f'Produto: {nome}')
+            print(f'Preço à vista: {preco:.2f}')
+            atualizar_preco(url, nome, preco, categoria)
+        else:
+            print('Fora de estoque')
     except NoSuchElementException:
         print('Elemento não encontrado')
-    
-    driver.quit()
+
+
 
 def agendando_notificacao(categorias):
     for categoria, urls in categorias.items():
@@ -151,6 +153,7 @@ categorias = {
         'https://www.terabyteshop.com.br/produto/23305/gabinete-gamer-lian-li-o11-dynamic-mini-redragon-edition-mid-tower-vidro-temperado-atx-black-sem-fonte-sem-fan-o11dmini-rd-x', 
         'https://www.terabyteshop.com.br/produto/19584/gabinete-gamer-cooler-master-masterbox-nr200-vidro-temperado-white-mini-itx-sem-fonte-com-2-fans-mcb-nr200-wnnn-s00', 
     ],
+    'TECLADO': [],
 }
 
 agendando_notificacao(categorias)
