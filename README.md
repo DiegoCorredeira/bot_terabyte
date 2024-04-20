@@ -52,4 +52,4 @@ ibirá informações relevantes no console. Se algum preço atingir o menor ou o
 10. Para pesquisar por um produto específico no banco de dados, chame a função `pesquisar_produto` e passe o nome do produto como argumento. O código exibirá os resultados da pesquisa no console.
 
 
--> Essa documentação foi gerada pela inteligencia artificial. 
+-> No momento atual, o projeto encontra-se em manutenção 
